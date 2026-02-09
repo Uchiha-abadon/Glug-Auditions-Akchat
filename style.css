@@ -5,6 +5,48 @@
     margin: 0;
     padding: 0;
 }
+@keyframes scrollani {
+    from{
+        translate: 0vw 57vh;
+    }
+    to{
+        translate: 0px 55vh;
+    }
+}
+@keyframes hi {
+    from{
+        translate: -10vw;
+        opacity: 0;
+    }
+    to{
+
+    }
+}
+@keyframes name {
+    from{
+        translate: 10vw;
+        opacity: 0;
+    }
+    to{
+
+    }
+}
+@keyframes outof {
+    from{
+        opacity: 0;
+    }
+    to{
+
+    }
+}
+@keyframes enlg {
+    from{
+
+    }
+    to{
+        width: 4.5vw;
+    }
+}
 body{
     background-color: #050027;
 }
@@ -47,21 +89,38 @@ main .first{
     padding: 83px;
     height: 60vh;
 }
+main .first .scroll{
+    font-size: 0.7rem;
+    translate: 0vw 55vh;
+    animation-name: scrollani;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: cubic-bezier(0.16, 0.5, 0.54, 0.74);
+}
 main .first .left{
     display: flex;  
     font-size: 7rem;
     font-weight: 500;
     gap: 45px;
 }
+main .first .left .hi{
+    animation-name: hi;
+    animation-duration: 2s;
+}
 main .first .left .name{
     color: rgb(150, 73, 221);
     text-shadow: 5px 11px 20px black;
+    animation-name: name;
+    animation-duration: 2s;
 }
 main .first .det{
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 2rem;
+    animation-name: outof;
+    animation-duration: 2s;
 }
 main .divi{
     border: 0;
@@ -412,7 +471,9 @@ footer img{
     width: 4vw;
 }
 footer img:hover{
-    width: 4.5vw;
+    animation-name: enlg;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 }
 @media (max-width: 770px){
     nav{
@@ -556,5 +617,8 @@ footer img:hover{
         font-size: 5rem;
         gap: 0px;
         align-items: center;
+    }
+    main .first .det{
+        font-size: 1.40rem;
     }
 }     
